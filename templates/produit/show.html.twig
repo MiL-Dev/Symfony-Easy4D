@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produit{% endblock %}
+
+{% block body %}
+    <h1>Produit</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ produit.id }}</td>
+            </tr>
+            <tr>
+                <th>Easy4D</th>
+                <td>{{ produit.Easy4D }}</td>
+            </tr>
+            <tr>
+                <th>EAN_Code</th>
+                <td>{{ produit.EANCode }}</td>
+            </tr>
+            <tr>
+                <th>Designation</th>
+                <td>{{ produit.Designation }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ produit.Category }}</td>
+            </tr>
+            <tr>
+                <th>Brand_name</th>
+                <td>{{ produit.BrandName }}</td>
+            </tr>
+            <tr>
+                <th>Family_name</th>
+                <td>{{ produit.FamilyName }}</td>
+            </tr>
+            <tr>
+                <th>Width</th>
+                <td>{{ produit.Width }}</td>
+            </tr>
+            <tr>
+                <th>Height</th>
+                <td>{{ produit.Height }}</td>
+            </tr>
+            <tr>
+                <th>Diameter</th>
+                <td>{{ produit.Diameter }}</td>
+            </tr>
+            <tr>
+                <th>Construction</th>
+                <td>{{ produit.Construction }}</td>
+            </tr>
+            <tr>
+                <th>Load_index</th>
+                <td>{{ produit.LoadIndex }}</td>
+            </tr>
+            <tr>
+                <th>Speed_index</th>
+                <td>{{ produit.SpeedIndex }}</td>
+            </tr>
+            <tr>
+                <th>Segment</th>
+                <td>{{ produit.Segment }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_produit_index') }}">back to list</a>
+
+    <a href="{{ path('app_produit_edit', {'id': produit.id}) }}">edit</a>
+
+    {{ include('produit/_delete_form.html.twig') }}
+{% endblock %}
